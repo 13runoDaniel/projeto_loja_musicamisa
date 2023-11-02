@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'EB Garamond', serif;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-flex{
+    display: flex;
+}
+
+header,
+footer{
+    padding-top: 16px;
+    background-color: rgb(66, 1, 26);
+}
+
+header > .container,
+footer > .container{
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+}
+
+header h1{
+    font-size: 3em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.menu-hamburguer{
+    width: 2em;
+    cursor: pointer;
+}
+
+.menu-hamburguer span{
+    display: block;
+    height: 0.25em;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 4px;
+}
+
+nav{
+    display: none;
+    padding: 16px 0;
+    background-color: rgb(128, 26, 128);
+    text-align: right;
+}
+
+nav li{
+    list-style: none;
+    display:  inline;
+    margin-left: 12px;
+}
+
+nav li a{
+    color: #fff;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav li a:hover{
+    text-decoration: underline;
+}
+
+section{
+    padding: 18px 0;
+}
+
+section h2{
+    margin-bottom: 24px;
+    font-size: 2.25em;
+    font-weight: bold;
+    padding-bottom: 36px;
+    color: rgb(66, 1, 26);
+}
+
+#sobre-a-loja h2,
+#camisetas h2,
+#chinelo h2,
+#bolsa h2{
+    border-bottom: 4px  solid rgb(66, 1, 26);
+}
+
+#sobre-a-loja img{
+    margin-right: 24px;
+    max-width: 100%;
+}
+
+.produtos{
+    flex-wrap: wrap;
+}
+
+.produtos li{
+    list-style: none;
+    max-width: 30%;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.produtos li img{
+    width: 100%;
+}
+
+.produtos li .overlay-imagem{
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.699);
+    opacity: 0;
+    transition: all ease .5s;
+    position: absolute;
+    top: 65%;
+    width: 100%;
+}
+
+.produtos li .overlay-imagem:hover{
+    opacity: 1;
+}
+
+.overlay-imagem a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.overlay-imagem a:hover{
+    text-decoration: underline;
+}
+
+.produtos li h3{
+    text-align: center;
+    font-size: 1.37em;
+    color: rgb(66, 1, 26);
+}
+
+button{
+    display: block;
+    width: 100%;
+    padding: 4px 0;
+    background-color: rgb(128, 26, 128);
+    font-size: 1.25em;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.produtos li button:hover{
+    text-decoration: underline;
+}
+
+.produto-centro{
+    margin: 0 5%;
+}
+
+li strong{
+    display: block;
+    text-align: center;
+    font-size: 1.37em;
+    font-weight: bold;
+    color: rgb(66, 1, 26);
+    padding: 4px 0;
+}
+
+#fale-conosco{
+    border-top: 4px solid rgb(66, 1, 26);
+}
+
+#fale-conosco h2{
+    font-size: 1.75em;
+    margin-bottom: 1px;
+}
+
+form{
+    max-width: 280px;
+    width: 100%;
+}
+
+.campo-formulario{
+    margin-bottom: 12px;
+}
+
+form label,
+form input,
+form textarea{
+    display: block;
+    width: 100%;
+}
+
+form label:focus,
+form input:focus,
+form textarea:focus{
+    outline: none;
+}
+
+form label{
+    font-weight: bold;
+}
+
+form input,
+form textarea{
+    padding: 4px;
+    font-size: 1.13em;
+}
+
+form textarea{
+    height: 200px;
+    resize: none;
+}
+
+footer .container{
+    color: #fff;
+    font-size: 1.37em;
+    font-weight: bold;
+}
+
+footer li{
+    list-style: none;
+    margin-left: 8px;
+}
+
+footer li a{
+    text-decoration: none;
+}
+
+footer li img{
+    height: 34px;
+}
+
+@media screen and (max-width: 767px){
+    .container{
+        max-width: 90%;
+    }
+
+    header > .container{
+        text-align: center;
+    }
+
+    header h1{
+        font-size: 1.7em;
+    }
+
+    .menu-hamburguer{
+        width: 2em;
+    }
+
+    nav li{
+        display: block;
+        margin-left: 0;
+        text-align: right;
+    }
+
+    nav li a{
+        font-size: 0.9em;
+    }
+
+    section h2{
+        font-size: 1.5em;
+        padding-bottom: 8px;
+    }
+
+    #sobre-a-loja img{
+        margin-bottom: 15px;
+        background-size: contain;
+        background-size: cover;
+    }
+
+    #sobre-a-loja .container{
+        display: block;
+    }
+
+    #sobre-a-loja img{
+        margin-right: 0;
+    }
+
+    .produtos{
+        display: block;
+    }
+
+    .produtos li{
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    .produto-centro{
+        margin: 0;
+    }
+
+    #fale-conosco h2{
+        font-size: 1.2em;
+    }
+
+    form{
+        max-width: 100%;
+    }
+
+    footer .container-flex{
+        display: block;
+    }
+
+    footer .container{
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    footer .container p{
+        margin-bottom: 10px;
+    }
+
+    footer li{
+        display: inline;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .container{
+        max-width: 90%;
+    }
+
+    .produtos li{
+        justify-content: center;
+        max-width: 49%;
+        padding: 0 1%;
+    }
+
+    .produto-centro{
+        margin: 0;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 1180px){
+    .produtos{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .produtos li{
+        max-width: 50%;
+    }
+
+    .produto-centro{
+        margin: 0;
+    }
+}
